@@ -7,15 +7,13 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "ai-sentinel.run",
-        "title": "Run AI Sentinel"
+        "command": "mr-ai.askOllama",
+        "title": "Ask AI Sentinel"
       }
     ]
   },
