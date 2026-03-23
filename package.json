@@ -1,23 +1,21 @@
 {
   "name": "mr-ai",
+  "publisher": "mr-rathore",
   "displayName": "Mr.Ai",
   "description": "My autonomous coding AI",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.110.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:mr-ai.askOllama"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "mr-ai.askOllama",
-        "title": "Ask Mr. Ai"
+        "command": "ai-sentinel.run",
+        "title": "Run AI Sentinel"
       }
     ]
   },
