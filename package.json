@@ -1,23 +1,39 @@
 {
   "name": "mr-ai",
+  "displayName": "Super AI Sentinel",
+  "description": "Advanced autonomous coding AI - powerful code writing with Code Llama/DeepSeek, interactive chat, less boring!",
+  "version": "0.1.0",
   "publisher": "mr-rathore",
-  "displayName": "Mr.Ai",
-  "description": "My autonomous coding AI",
-  "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "ai-sentinel.run",
-        "title": "Run AI Sentinel"
+        "command": "mr-ai.askOllama",
+        "title": "Ask Super AI Sentinel"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ai-sentinel-container",
+          "title": "AI Sentinel",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "ai-sentinel-container": [
+        {
+          "type": "webview",
+          "id": "aiSentinelChat",
+          "name": "Super AI Chat"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -46,5 +62,6 @@
   },
   "dependencies": {
     "node-fetch": "^2.7.0"
-  }
+  },
+  "icon": "media/icon.svg"
 }
